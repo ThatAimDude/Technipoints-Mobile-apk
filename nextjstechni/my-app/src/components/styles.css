@@ -1,0 +1,82 @@
+body {
+    background: linear-gradient(#2a00b7, #42006c);
+    font-family: sans-serif;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Horizontally centers the container */
+    align-items: center; /* Vertically centers the container */
+    height: 100vh; /* Ensures the body takes up the full viewport height */
+    margin: 0; /* Removes default margin */
+}
+
+.Container {
+    background: white;
+    width: 480px;
+    height: 600px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    height: 50px;
+    margin-top: 35px;
+ 
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.text{
+    margin-top: 15px;
+}
+
+.texp{
+    margin-top: 10px;
+}
+
+.loginsignup{
+    margin-top: 10px;
+    width: 90%;
+    background: rgb(147, 147, 147);
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+
+
+
+.login{
+  
+    height: 100%;
+    width: 50%;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.signup{
+    height: 100%;
+    width: 50%;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.white{
+    background: white;
+}
