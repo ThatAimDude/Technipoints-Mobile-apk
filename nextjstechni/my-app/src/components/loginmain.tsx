@@ -19,15 +19,20 @@ export default function LoginMain() {
 
         <div className="loginsignup">
             
-            <div className="login"><p>Login</p></div>
+            <div className={`login ${activeTab === "login" ? "white" : ""}`}
+            onClick={() => setActiveTab("login")}><p>Login</p></div>
 
-            <div className="signup"><p>Signup</p></div>
+            <div className={`signup ${activeTab === "signup" ? "white" : ""}`}
+            onClick={() => setActiveTab("signup")}><p>Signup</p></div>
 
         </div>
+
+        <LoginForm />
+
+    </div>  
+
     </div>
 
-    
 
-    </div>
   );
 }
