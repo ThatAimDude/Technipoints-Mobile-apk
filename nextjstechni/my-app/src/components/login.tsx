@@ -7,18 +7,13 @@ import SignupForm from "./signup";
 
 
 export default function LoginMain() {
-  const [activeTab, setActiveTab] = useState<"login" | "signup">("login");
+  const [activeTab, setActiveTab] = useState("login");
 
   return (
    
         <div className="loginform">
             <div className="inputs">
 
-
-                 <p>Full Name</p>
-                <div className="input">
-                    <input type="text" placeholder="Name"/>
-                </div>
  
                 <p>Email</p>
                 <div className="input">

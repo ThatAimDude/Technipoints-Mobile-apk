@@ -11,7 +11,7 @@ export default function LoginMain() {
     <div>
     <div className="Container">
 
-      <img src="/Logo.png" alt="logo" className="logo" />
+      <img src="/Logo.svg" alt="logo" className="logo" />
 
         <h2 className="text">Welcome to our school</h2>
      
@@ -27,8 +27,11 @@ export default function LoginMain() {
 
         </div>
 
-        <LoginForm />
+        {activeTab === "login" ? <LoginForm /> : <SignupForm />}
 
+
+
+        <button className="submit"><p>Login</p></button>
     </div>  
 
     </div>
