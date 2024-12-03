@@ -1,4 +1,4 @@
-import LoginMain from '../components/loginmain'
+import LoginMain from '../components/loginsignupmain'
 import '../components/styles.css'
 
 export default function Home() {

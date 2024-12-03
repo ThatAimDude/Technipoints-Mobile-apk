@@ -1,11 +1,11 @@
 body {
     background: #f5f5f5;
     font-family: sans-serif;
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Horizontally centers the container */
-    align-items: center; /* Vertically centers the container */
-    height: 100vh; /* Ensures the body takes up the full viewport height */
-    margin: 0; /* Removes default margin */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
 }
 
 .Container {
@@ -53,8 +53,6 @@ h2{
     font-weight: 550;   
 
 }
-
-
 
 
 .login{
