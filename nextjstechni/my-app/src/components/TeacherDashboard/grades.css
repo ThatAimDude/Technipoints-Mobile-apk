@@ -1,0 +1,89 @@
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f4f6; /* Light background for better contrast */
+}
+
+.header {
+  background-color: #4B0082;
+  color: white;
+  padding: 1rem;
+}
+
+.header-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 80rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.welcome-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #374151; /* Dark gray for better readability */
+}
+
+.data-table {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden; /* Prevents elements from spilling out */
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #6b7280;
+  background-color: #f3f4f6; /* Subtle background for the header */
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+  transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+  background-color: white; /* Ensure baseline background is white */
+}
+
+.table-row:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.table-row:hover {
+  background-color: #d1d5db; /* Light gray background on hover */
+  cursor: pointer; /* Indicates interactivity */
+}
+
+.class-name {
+  font-weight: 500;
+  color: #1f2937; /* Darker text color for emphasis */
+}
+
+.average-score {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.score-value {
+  font-size: 0.875rem;
+  color: #374151; /* Matches text color */
+}

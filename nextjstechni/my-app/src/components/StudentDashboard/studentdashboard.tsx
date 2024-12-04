@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input"
 import '../TeacherDashboard/teacher-view.css'
 import SubjectProgress from "@/components/ui/subject-progress";
+import HeaderTop from "@/components/ui/header"
 
 interface Student {
   name: string
@@ -32,40 +33,72 @@ const StudentDashboard = () => {
         totalPoints: 85,
         maxPoints: 100,
         pointEntries: [
-          { id: "1", source: "Quiz", date: "2023-05-15", pointsEarned: 18, totalPoints: 20 },
-          { id: "2", source: "Homework", date: "2023-05-10", pointsEarned: 27, totalPoints: 30 },
-          { id: "3", source: "Test", date: "2023-05-05", pointsEarned: 40, totalPoints: 50 },
-          { id: "4", source: "Quiz", date: "2023-05-05", pointsEarned: 22, totalPoints: 50 },
+          { id: "1", source: "Quiz", date: "2023-05-15", pointsEarned: 70, totalPoints: 20 },
+          { id: "2", source: "Homework", date: "2023-05-10", pointsEarned: 29, totalPoints: 30 },
+          { id: "3", source: "Test", date: "2023-05-05", pointsEarned: 20, totalPoints: 50 },
+          { id: "4", source: "Quiz", date: "2023-05-05", pointsEarned: 12, totalPoints: 50 },
           { id: "5", source: "Test", date: "2023-05-05", pointsEarned: 1, totalPoints: 50 },
-          { id: "6", source: "Homework", date: "2023-05-05", pointsEarned: 50, totalPoints: 50 },
-          { id: "7", source: "Test", date: "2023-05-05", pointsEarned: 18, totalPoints: 50 },
+          { id: "6", source: "Homework", date: "2023-05-05", pointsEarned: 3, totalPoints: 50 },
+          { id: "7", source: "Test", date: "2023-05-05", pointsEarned: 4, totalPoints: 50 },
+        ],
+      };
+
+
+      const data1 = {
+        subject: "Mathematics",
+        totalPoints: 85,
+        maxPoints: 100,
+        pointEntries: [
+          { id: "1", source: "Quiz", date: "2023-05-15", pointsEarned: 12, totalPoints: 20 },
+          { id: "2", source: "Homework", date: "2023-05-10", pointsEarned: 19, totalPoints: 30 },
+          { id: "3", source: "Test", date: "2023-05-05", pointsEarned: 16, totalPoints: 50 },
+          { id: "4", source: "Quiz", date: "2023-05-05", pointsEarned: 15, totalPoints: 50 },
+          { id: "5", source: "Test", date: "2023-05-05", pointsEarned: 20, totalPoints: 50 },
+          { id: "6", source: "Homework", date: "2023-05-05", pointsEarned: 30, totalPoints: 50 },
+          { id: "7", source: "Test", date: "2023-05-05", pointsEarned: 4, totalPoints: 50 },
+        ],
+      };
+
+      const data2 = {
+        subject: "Mathematics",
+        totalPoints: 85,
+        maxPoints: 100,
+        pointEntries: [
+          { id: "1", source: "Quiz", date: "2023-05-15", pointsEarned: 7, totalPoints: 20 },
+          { id: "2", source: "Homework", date: "2023-05-10", pointsEarned: 26, totalPoints: 30 },
+          { id: "3", source: "Test", date: "2023-05-05", pointsEarned: 50, totalPoints: 50 },
+          { id: "4", source: "Quiz", date: "2023-05-05", pointsEarned: 24, totalPoints: 50 },
+          { id: "5", source: "Test", date: "2023-05-05", pointsEarned: 12, totalPoints: 50 },
+          { id: "6", source: "Homework", date: "2023-05-05", pointsEarned: 3, totalPoints: 50 },
+          { id: "7", source: "Test", date: "2023-05-05", pointsEarned: 4, totalPoints: 50 },
         ],
       };
 
 
     return (
         <div className="min-h-screen bg-white">
-            <header className="header">
-                <div className="header-content">
-                    <Button variant="ghost" size="icon" className="header-button">
-                        <Home className="h-6 w-6" />
-                    </Button>
-                    <div className="logo-container">
-                        <img src="/logowhite.png" alt="logo" className="logo" />
-                    </div>
-                    <Button variant="ghost" size="icon" className="header-button">
-                        <User className="h-6 w-6" />
-                    </Button>
-                </div>
-            </header>
+            <HeaderTop/>
             <main className="main-content">
                 <h1 className="title">Oceny</h1>
 
 
                 <div className="containergrades">
-                <div><SubjectProgress {...data} /> </div>
-                <div><SubjectProgress {...data}  /></div>
-                <div><SubjectProgress {...data}  /></div>
+              <SubjectProgress {...data} />
+              <SubjectProgress {...data1} />
+              <SubjectProgress {...data2} />
+              <SubjectProgress {...data} />
+              <SubjectProgress {...data2} />
+              <SubjectProgress {...data} />
+              <SubjectProgress {...data2} />
+              <SubjectProgress {...data1} />
+              <SubjectProgress {...data} />
+              <SubjectProgress {...data1} />
+              <SubjectProgress {...data} />
+              <SubjectProgress {...data1} />
+              <SubjectProgress {...data2} />
+              <SubjectProgress {...data} />
+               
+                
                 
                 </div>
 

@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Progress } from "@/components/ui/progress"
 import './subject-progress.css'
 
-
 interface PointEntry {
   id: string
   source: 'Quiz' | 'Test' | 'Homework'
@@ -22,6 +21,7 @@ interface SubjectProgressProps {
 
 export default function SubjectProgress({ subject, totalPoints, maxPoints, pointEntries }: SubjectProgressProps) {
   const [openItems, setOpenItems] = useState<string[]>([])
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null) // Define hoveredItem state
 
   const toggleItem = (id: string) => {
     setOpenItems(prev => 
@@ -35,27 +35,33 @@ export default function SubjectProgress({ subject, totalPoints, maxPoints, point
 
   return (
     <div className="container">
-      <h2 className="text-2xl font-bold mb-4">{subject}</h2>
+      <h2 className="text-2xl">{subject}</h2>
       <div className="mb-6">
-        <Progress value={progressPercentage} className="h-4 bg-gray-200"  />
-        <p className="text-sm text-gray-600 mt-2">
+        <Progress value={progressPercentage} className="h-4" />
+        <p className="text-sm">
           Total Points: {totalPoints} / {maxPoints}
         </p>
       </div>
-      <div className="flex flex-wrap gap-1">
+      <div className="flex">
         {pointEntries.map((entry) => {
           const colorClass = colorClasses[entry.pointsEarned % colorClasses.length]; 
 
           return (
-            <div key={entry.id} className="relative">
-              <div onClick={() => toggleItem(entry.id)}>
+            <div key={entry.id} 
+              className="relative" 
+              onMouseEnter={() => setHoveredItem(entry.id)} // Set hovered item on hover
+              onMouseLeave={() => setHoveredItem(null)} // Clear hovered item on mouse leave
+            >
+              <div>
                 <span className={`grades ${colorClass}`}>{entry.pointsEarned}</span>
               </div>
-              {openItems.includes(entry.id) && (
+              {hoveredItem === entry.id && ( // Render dropdown if item is hovered
                 <div className="dropdown">
                   <p className="font-semibold">{entry.source}</p>
                   <p>Date: {entry.date}</p>
-                  <p>Points: {entry.pointsEarned} / {entry.totalPoints}</p>
+                  <p>
+                    Points: {entry.pointsEarned} / {entry.totalPoints}
+                  </p>
                 </div>
               )}
             </div>

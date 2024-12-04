@@ -1,10 +1,11 @@
-import TeacherView from '../../components/TeacherDashboard/teacherview'
+
+import Grades from '../../components/TeacherDashboard/grades'
 
 
 export default function Home() {
   return (
     <div>
-      <TeacherView />
+      <Grades />
     </div>
   );
 }
