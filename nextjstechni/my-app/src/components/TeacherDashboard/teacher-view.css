@@ -60,8 +60,13 @@
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 0.25rem;
+    transition: all 0.3s ease;
   }
   
+  .point-square:hover{
+    transform: scale(1.2);
+  }
+
   .cyan { background-color: #22d3ee; }
   .blue { background-color: #60a5fa; }
   .yellow { background-color: #fbbf24; }
@@ -88,4 +93,6 @@
     text-align: right;
   }
   
-  
+  .table-row:hover{
+    background: #e7e7e7;
+  }
