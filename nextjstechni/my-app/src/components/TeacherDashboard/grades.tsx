@@ -1,19 +1,18 @@
 'use client'
 
-import { Home, User } from 'lucide-react'
 import { Progress } from "@/components/ui/progress"
-import Image from "next/image"
 import './grades.css'
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 import './teacher-view.css'
 import HeaderTop from "@/components/ui/header"
+import Footer from "@/components/ui/footer"
 
 export default function Dashboard() {
   return (
+
+    <div>
     <div className="dashboard">
+
+      
       <HeaderTop />
 
 
@@ -41,7 +40,11 @@ export default function Dashboard() {
           ))}
         </div>
       </main>
+      
     </div>
+          <Footer />
+    </div>
+    
   )
 }
 

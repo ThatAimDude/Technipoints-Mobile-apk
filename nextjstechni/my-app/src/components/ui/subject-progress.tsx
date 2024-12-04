@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Progress } from "@/components/ui/progress"
 import './subject-progress.css'
 
+
 interface PointEntry {
   id: string
   source: 'Quiz' | 'Test' | 'Homework'
@@ -69,5 +70,7 @@ export default function SubjectProgress({ subject, totalPoints, maxPoints, point
         })}
       </div>
     </div>
-  )
+    
+
+)
 }

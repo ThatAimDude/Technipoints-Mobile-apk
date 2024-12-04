@@ -1,9 +1,6 @@
-import { useState } from 'react'
+
 import { Home, User, Pencil, ChevronDown } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 import './header.css'
 
 const Header: React.FC = () => {

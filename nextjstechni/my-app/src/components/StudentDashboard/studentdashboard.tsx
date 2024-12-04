@@ -1,19 +1,9 @@
 'use client'
 
-import { useState } from 'react'
-import { Home, User, Pencil, ChevronDown } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { Progress } from "@/components/ui/progress"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 import '../TeacherDashboard/teacher-view.css'
 import SubjectProgress from "@/components/ui/subject-progress";
 import HeaderTop from "@/components/ui/header"
+import Footer from "@/components/ui/footer"
 
 interface Student {
   name: string
@@ -103,7 +93,9 @@ const StudentDashboard = () => {
                 </div>
 
             </main>
+            <Footer/>
         </div>
+        
     );
 };
 

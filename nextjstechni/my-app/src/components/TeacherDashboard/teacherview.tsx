@@ -5,9 +5,9 @@ import { Home, User, Pencil, ChevronDown } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 import './teacher-view.css'
 import HeaderTop from "@/components/ui/header"
+import Footer from "@/components/ui/footer"
 
 interface Student {
   name: string
@@ -28,6 +28,7 @@ export default function TeacherView() {
 
 
   return (
+    <div>
     <div className="min-h-screen bg-white">
 
 
@@ -84,7 +85,9 @@ export default function TeacherView() {
           </table>
         </div>
       </main>
-    </div>
+    
+    </div>  
+        <Footer /> </div>
   )
 }
 
